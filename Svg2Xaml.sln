@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svg2Xaml", "Svg2Xaml\Svg2Xaml.csproj", "{CC00B002-26DE-4040-869A-34D963AD174F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svg2XamlTest", "Svg2XamlTest\Svg2XamlTest.csproj", "{6CB94CB9-B039-4726-8A61-B899CAD8C4AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svg2XamlBrowser", "Svg2XamlBrowser\Svg2XamlBrowser.csproj", "{97DEB6B3-8476-4A42-9BD7-D6EC7B242D32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svg2XamlTestExtension", "Svg2XamlTestExtension\Svg2XamlTestExtension.csproj", "{09217551-45A7-4158-8373-7DD8D98B36A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC00B002-26DE-4040-869A-34D963AD174F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC00B002-26DE-4040-869A-34D963AD174F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC00B002-26DE-4040-869A-34D963AD174F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC00B002-26DE-4040-869A-34D963AD174F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CB94CB9-B039-4726-8A61-B899CAD8C4AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CB94CB9-B039-4726-8A61-B899CAD8C4AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CB94CB9-B039-4726-8A61-B899CAD8C4AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CB94CB9-B039-4726-8A61-B899CAD8C4AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97DEB6B3-8476-4A42-9BD7-D6EC7B242D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97DEB6B3-8476-4A42-9BD7-D6EC7B242D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97DEB6B3-8476-4A42-9BD7-D6EC7B242D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97DEB6B3-8476-4A42-9BD7-D6EC7B242D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09217551-45A7-4158-8373-7DD8D98B36A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09217551-45A7-4158-8373-7DD8D98B36A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09217551-45A7-4158-8373-7DD8D98B36A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09217551-45A7-4158-8373-7DD8D98B36A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

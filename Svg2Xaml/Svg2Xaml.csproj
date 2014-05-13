@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CC00B002-26DE-4040-869A-34D963AD174F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Svg2Xaml</RootNamespace>
+    <AssemblyName>Svg2Xaml</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Svg2Xaml.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Svg2Xaml.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SvgImageExtension.cs" />
+    <Compile Include="SvgPatternUnits.cs" />
+    <Compile Include="SvgFillRule.cs" />
+    <Compile Include="SvgDisplay.cs" />
+    <Compile Include="SvgStyleElement.cs" />
+    <Compile Include="SvgFEColorMatrixElement.cs" />
+    <Compile Include="SvgSkewTransform.cs" />
+    <Compile Include="SvgRotateTransform.cs" />
+    <Compile Include="SvgTransformGroup.cs" />
+    <Compile Include="SvgForeignObjectElement.cs" />
+    <Compile Include="SvgMaskUnits.cs" />
+    <Compile Include="SvgReaderOptions.cs" />
+    <Compile Include="SvgSpreadMethod.cs" />
+    <Compile Include="SvgGradientUnits.cs" />
+    <Compile Include="SvgScaleTransform.cs" />
+    <Compile Include="SvgTranslateTransform.cs" />
+    <Compile Include="SvgMatrixTransform.cs" />
+    <Compile Include="SvgColorPaint.cs" />
+    <Compile Include="SvgTSpanElement.cs" />
+    <Compile Include="SvgUrlPaint.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SvgAElement.cs" />
+    <Compile Include="SvgBaseElement.cs" />
+    <Compile Include="SvgCircleElement.cs" />
+    <Compile Include="SvgClipPathElement.cs" />
+    <Compile Include="SvgColor.cs" />
+    <Compile Include="SvgContainerBaseElement.cs" />
+    <Compile Include="SvgCoordinate.cs" />
+    <Compile Include="SvgDefsElement.cs" />
+    <Compile Include="SvgDocument.cs" />
+    <Compile Include="SvgDrawableBaseElement.cs" />
+    <Compile Include="SvgDrawableContainerBaseElement.cs" />
+    <Compile Include="SvgEllipseElement.cs" />
+    <Compile Include="SvgFEBlendElement.cs" />
+    <Compile Include="SvgFEGaussianBlurElement.cs" />
+    <Compile Include="SvgFilterEffectBaseElement.cs" />
+    <Compile Include="SvgFilterElement.cs" />
+    <Compile Include="SvgFlowParaElement.cs" />
+    <Compile Include="SvgFlowRegionElement.cs" />
+    <Compile Include="SvgFlowRootElement.cs" />
+    <Compile Include="SvgFlowSpanElement.cs" />
+    <Compile Include="SvgGElement.cs" />
+    <Compile Include="SvgGradientBaseElement.cs" />
+    <Compile Include="SvgImageElement.cs" />
+    <Compile Include="SvgLength.cs" />
+    <Compile Include="SvgLinearGradientElement.cs" />
+    <Compile Include="SvgLineElement.cs" />
+    <Compile Include="SvgMarkerElement.cs" />
+    <Compile Include="SvgMaskElement.cs" />
+    <Compile Include="SvgMetadataElement.cs" />
+    <Compile Include="SvgPaint.cs" />
+    <Compile Include="SvgPathElement.cs" />
+    <Compile Include="SvgPatternElement.cs" />
+    <Compile Include="SvgPoint.cs" />
+    <Compile Include="SvgPolygonElement.cs" />
+    <Compile Include="SvgPolylineElement.cs" />
+    <Compile Include="SvgRadialGradientElement.cs" />
+    <Compile Include="SvgReader.cs" />
+    <Compile Include="SvgRectElement.cs" />
+    <Compile Include="SvgStopElement.cs" />
+    <Compile Include="SvgStrokeLinecap.cs" />
+    <Compile Include="SvgStrokeLinejoin.cs" />
+    <Compile Include="SvgSVGElement.cs" />
+    <Compile Include="SvgSwitchElement.cs" />
+    <Compile Include="SvgSymbolElement.cs" />
+    <Compile Include="SvgTextElement.cs" />
+    <Compile Include="SvgTransform.cs" />
+    <Compile Include="SvgUrl.cs" />
+    <Compile Include="SvgUseElement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="COPYING">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
