@@ -38,8 +38,8 @@ namespace Svg2Xaml
   class SvgDrawableContainerBaseElement
     : SvgContainerBaseElement
   {
-
     //==========================================================================
+    public readonly SvgViewbox ViewBox = new SvgViewbox(new Rect(0, 0, 0, 0)); 
     public readonly SvgLength    Opacity = new SvgLength(1.0);
     public readonly SvgTransform Transform;
     public readonly SvgURL ClipPath = null;
@@ -51,6 +51,10 @@ namespace Svg2Xaml
     public SvgDrawableContainerBaseElement(SvgDocument document, SvgBaseElement parent, XElement drawableContainerElement)
       : base(document, parent, drawableContainerElement)
     {
+      XAttribute viewBox_attribute = drawableContainerElement.Attribute("viewBox");
+      if (viewBox_attribute != null)
+          this.ViewBox = SvgViewbox.Parse(viewBox_attribute.Value);
+
       XAttribute opacity_attribute = drawableContainerElement.Attribute("opacity");
       if(opacity_attribute != null)
         Opacity = SvgLength.Parse(opacity_attribute.Value);
@@ -183,6 +187,9 @@ namespace Svg2Xaml
       drawing_group.Opacity   = Opacity.ToDouble();
       if(Transform != null)
         drawing_group.Transform = Transform.ToTransform();
+
+      if (ViewBox != null)
+          drawing_group.Children.Add(ViewBox.Process());
 
       foreach(SvgBaseElement child_element in Children)
       {
