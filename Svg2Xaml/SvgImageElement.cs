@@ -118,6 +118,10 @@ namespace Svg2Xaml
                 DataType = "png";
                 break;
 
+              case "svg+xml":
+                DataType = "svg+xml";
+                break;
+
               default:
                 throw new NotSupportedException(String.Format("Unsupported type: {0}", type));
             }
