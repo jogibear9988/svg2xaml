@@ -118,6 +118,10 @@ namespace Svg2Xaml
                 DataType = "png";
                 break;
 
+              case "svg+xml":
+                DataType = "svg+xml";
+                break;
+
               default:
                 throw new NotSupportedException(String.Format("Unsupported type: {0}", type));
             }
@@ -129,18 +133,29 @@ namespace Svg2Xaml
     //==========================================================================
     public override Drawing GetBaseDrawing()
     {
-      if(Data == null)
-        return null;
-
-      string temp_file = Path.GetTempFileName();
-      using(FileStream file_stream = new FileStream(temp_file, FileMode.Create, FileAccess.Write))
-      using(BinaryWriter writer = new BinaryWriter(file_stream))
-        writer.Write(Data);
-
-      return new ImageDrawing(new BitmapImage(new Uri(temp_file)), new Rect(
-        new Point(X.ToDouble(), Y.ToDouble()),
-        new Size(Width.ToDouble(), Height.ToDouble())
-        ));
+        if (Data == null)
+          return null;
+        ImageSource imageSource = null;
+        switch (DataType)
+        {
+          case "jpeg":
+          case "png":
+              var bmp = new BitmapImage();
+              bmp.BeginInit();
+              bmp.StreamSource = new MemoryStream(Data);
+              bmp.EndInit();
+              imageSource = bmp;
+              break;
+          case "svg+xml":
+              imageSource = SvgReader.Load(new MemoryStream(Data));
+              break;
+        }
+        if (imageSource == null)
+          return null;
+        return new ImageDrawing(imageSource, new Rect(
+                      new Point(X.ToDouble(), Y.ToDouble()),
+                      new Size(Width.ToDouble(), Height.ToDouble())
+                      ));
     }
 
     //==========================================================================
