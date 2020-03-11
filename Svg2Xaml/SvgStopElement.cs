@@ -39,7 +39,7 @@ namespace Svg2Xaml
   {
     //==========================================================================
     public readonly SvgLength Offset = new SvgLength(0);
-    public readonly SvgColor Color = new SvgColor(0,0,0);
+    public readonly Color Color = Colors.Black;
     public readonly SvgLength Opacity = new SvgLength(1);
 
     //==========================================================================
@@ -52,7 +52,7 @@ namespace Svg2Xaml
 
       XAttribute stop_color_attribute = stopElement.Attribute("stop-color");
       if(stop_color_attribute != null)
-        Color = SvgColor.Parse(stop_color_attribute.Value);
+        Color = SvgColorParser.Parse(stop_color_attribute.Value);
 
       XAttribute stop_opacity_attribute = stopElement.Attribute("stop-opacity");
       if(stop_opacity_attribute != null)
@@ -62,7 +62,7 @@ namespace Svg2Xaml
     //==========================================================================
     public GradientStop ToGradientStop()
     {
-      Color color = Color.ToColor();
+      Color color = Color;
       color.A = (byte)Math.Round(Opacity.ToDouble() * 255);
 
       GradientStop stop = new GradientStop();

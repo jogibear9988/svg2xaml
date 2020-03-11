@@ -47,8 +47,8 @@ namespace Svg2Xaml
     public readonly SvgLength FillOpacity = new SvgLength(1.0);
     public readonly SvgLength StrokeOpacity = new SvgLength(1.0);
     public readonly SvgTransform Transform = null;
-    public readonly SvgPaint Fill = new SvgColorPaint(new SvgColor(0,0,0));
-    public readonly SvgPaint Stroke = null; /* new SvgColorPaint(new SvgColor(0, 0, 0)); */
+    public readonly SvgPaint Fill = new SvgColorPaint(Colors.Black);
+    public readonly SvgPaint Stroke = null; /* new SvgColorPaint(Colors.Black); */
     public readonly SvgLength StrokeWidth = new SvgLength(1);
     public readonly SvgStrokeLinecap StrokeLinecap = SvgStrokeLinecap.Butt;
     public readonly SvgStrokeLinejoin StrokeLinejoin = SvgStrokeLinejoin.Miter;

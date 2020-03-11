@@ -100,7 +100,7 @@
     <Compile Include="SvgBaseElement.cs" />
     <Compile Include="SvgCircleElement.cs" />
     <Compile Include="SvgClipPathElement.cs" />
-    <Compile Include="SvgColor.cs" />
+    <Compile Include="SvgColorParser.cs" />
     <Compile Include="SvgContainerBaseElement.cs" />
     <Compile Include="SvgCoordinate.cs" />
     <Compile Include="SvgDefsElement.cs" />
