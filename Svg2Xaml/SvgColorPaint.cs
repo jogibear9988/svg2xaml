@@ -26,8 +26,7 @@
 //  $LastChangedBy$
 //
 ////////////////////////////////////////////////////////////////////////////////
-using System;
-using System.Globalization;
+
 using System.Windows.Media;
 
 namespace Svg2Xaml
@@ -41,10 +40,10 @@ namespace Svg2Xaml
     : SvgPaint
   {
     //==========================================================================
-    public readonly SvgColor Color;
+    public readonly Color Color;
 
     //==========================================================================
-    public SvgColorPaint(SvgColor color)
+    public SvgColorPaint(Color color)
     {
       Color = color;
     }
@@ -52,7 +51,7 @@ namespace Svg2Xaml
     //==========================================================================
     public override Brush ToBrush(SvgBaseElement element)
     {
-      return new SolidColorBrush(Color.ToColor());
+      return new SolidColorBrush(Color);
     }
 
   } // class SvgColorPaint
